@@ -1,0 +1,5 @@
+# Encryption and security
+cryptography==43.0.1
+
+# Regex for privacy guard
+regex==2024.9.11

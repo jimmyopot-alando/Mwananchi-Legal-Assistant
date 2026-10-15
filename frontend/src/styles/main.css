@@ -1,0 +1,455 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Typography */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header,
+.app-footer {
+  background-color: #004080;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Sections */
+.home-section,
+.askquestion-section,
+.generatedocument-section,
+.knowyourrights-section,
+.payment-section,
+.courtselection-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ChatBox */
+.chatbox-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+}
+
+.chatbox-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.chatbox-message {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.chatbox-message.user {
+  background: #e6f2ff;
+  text-align: right;
+}
+
+.chatbox-message.assistant {
+  background: #f0f0f0;
+  text-align: left;
+}
+
+.chatbox-message.system {
+  background: #ffe6cc;
+  text-align: center;
+  font-style: italic;
+}
+
+.chatbox-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chatbox-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chatbox-input button {
+  padding: 0.5rem 1rem;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #004080;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #ccc;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Lists */
+.rights-list,
+.courts-list,
+.fees-list {
+  margin-top: 1rem;
+}
+
+.right-item,
+.court-item,
+.fee-item {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Rights Library Cards */
+.right-item.clickable {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.right-item.clickable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-color: #004080;
+}
+
+/* Explore Button */
+.explore-btn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.explore-btn:hover {
+  background-color: #003060;
+}
+
+/* Right Detail Page */
+.rightdetail-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rightdetail-container h1 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+.right-description {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.right-content {
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Totals */
+.fee-total {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Responsive Styles */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .app-main {
+    padding: 1.5rem;
+  }
+
+  .home-section,
+  .askquestion-section,
+  .generatedocument-section,
+  .knowyourrights-section,
+  .payment-section,
+  .courtselection-section {
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+
+  .app-header,
+  .app-footer {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .chatbox-container {
+    padding: 0.8rem;
+  }
+
+  .chatbox-messages {
+    max-height: 200px;
+  }
+
+  .chatbox-input {
+    flex-direction: column;
+  }
+
+  .chatbox-input input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .chatbox-input button {
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .right-item,
+  .court-item,
+  .fee-item {
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .app-main {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .chatbox-messages {
+    max-height: 150px;
+  }
+
+  .fee-total {
+    font-size: 1rem;
+  }
+}
+
+/* Home Page Styling */
+.home-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-title {
+  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Home Sections */
+.home-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.home-section h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* Chat Section */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.chat-box input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chat-box button {
+  align-self: flex-end;
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Voice Interaction */
+.voice-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.voice-button {
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.voice-button:hover {
+  background-color: #003060;
+}
+
+/* Rights Section */
+.rights-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rights-buttons button {
+  background-color: #e6f2ff;
+  color: #004080;
+  border: 1px solid #004080;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rights-buttons button:hover {
+  background-color: #004080;
+  color: #fff;
+}
+
+/* Courts Section */
+.court-search {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.court-search input {
+  width: 70%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.court-search button {
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Fees Section */
+.fees-section button {
+  background-color: #004080;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

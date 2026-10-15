@@ -1,0 +1,114 @@
+/* Responsive Styles */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+    .app-main {
+        padding: 1.5rem;
+    }
+
+    .home-section,
+    .askquestion-section,
+    .generatedocument-section,
+    .knowyourrights-section,
+    .payment-section,
+    .courtselection-section {
+        margin-bottom: 1.5rem;
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+
+    .app-header,
+    .app-footer {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .app-main {
+        padding: 1rem;
+    }
+
+    .chatbox-container {
+        padding: 0.8rem;
+    }
+
+    .chatbox-messages {
+        max-height: 200px;
+    }
+
+    .chatbox-input {
+        flex-direction: column;
+    }
+
+    .chatbox-input input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .chatbox-input button {
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .right-item,
+    .court-item,
+    .fee-item {
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .app-main {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .chatbox-messages {
+        max-height: 150px;
+    }
+
+    .fee-total {
+        font-size: 1rem;
+    }
+}

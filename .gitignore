@@ -1,0 +1,51 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env/
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+
+# Mobile (React Native / Expo)
+.expo/
+.expo-shared/
+android/
+ios/
+
+# Logs
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+
+# Backups
+backups/
+*.gz
+
+# Metrics reports (generated)
+metrics/reports/*.tmp
+metrics/reports/*.bak

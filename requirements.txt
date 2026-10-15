@@ -1,0 +1,27 @@
+# Core web framework
+fastapi==0.115.0
+uvicorn==0.30.0
+
+# Data and ML
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.1
+torch==2.3.1
+transformers==4.44.2
+
+# Database
+pymongo==4.8.0
+sqlalchemy==2.0.32
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.32.3
+
+# Geospatial (for GPS/court finder microservice)
+geopy==2.4.1
+
+# Payment integration (M-Pesa, etc.)
+mpesa-api==0.3.0
+
+# Testing
+pytest==8.3.2

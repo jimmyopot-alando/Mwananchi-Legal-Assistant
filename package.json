@@ -1,0 +1,35 @@
+{
+  "name": "mwananchi-legal-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered legal assistant built with MERN stack and Python microservices",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "frontend": "cd frontend && npm start",
+    "mobile": "cd mobile && npm start",
+    "seed": "node scripts/seedData.js",
+    "deploy": "bash scripts/deploy.sh",
+    "backup": "bash scripts/backup.sh",
+    "test": "jest --watchAll"
+  },
+  "author": "Jimmy Opot Alando",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.24.4",
+    "morgan": "^1.10.0",
+    "node-cron": "^4.6.0",
+    "pm2": "^5.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.14"
+  }
+}

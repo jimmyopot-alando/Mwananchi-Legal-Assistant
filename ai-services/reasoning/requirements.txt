@@ -1,0 +1,14 @@
+# Core API framework
+fastapi==0.115.0
+uvicorn==0.30.0
+
+# Data validation
+pydantic==2.9.0
+
+# NLP + text processing
+regex==2024.9.11
+franc==0.2.4   # language detection
+nltk==3.9.1    # optional: tokenization, stopwords, etc.
+
+# Utilities
+python-multipart==0.0.9   # for handling form-data if needed

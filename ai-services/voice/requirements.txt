@@ -1,0 +1,12 @@
+# Speech recognition
+SpeechRecognition==3.10.0
+
+# Text-to-speech
+pyttsx3==2.90
+
+# Audio handling dependencies
+pyaudio==0.2.14      # required for microphone input
+pydub==0.25.1        # optional: audio file conversion (mp3 <-> wav)
+
+# Utilities
+numpy==2.1.1         # used internally by audio libraries

@@ -1,0 +1,54 @@
+version: "3.9"
+
+services:
+  # MongoDB database
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # Backend (Express + Node.js)
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/legal_assistant
+      - JWT_SECRET=${JWT_SECRET}
+      - NODE_ENV=production
+    depends_on:
+      - mongo
+
+  # Frontend (React)
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+
+  # Python microservices (AI/ML, payments, GPS, translation)
+  microservices:
+    build: ./microservices
+    container_name: microservices
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/legal_assistant
+      - PYTHON_ENV=production
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:
